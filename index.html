@@ -2,90 +2,24 @@
 <html>
   <head>
     <title>The Meme Way</title>
+    <meta
+      name="google-site-verification"
+      content="i3X-UDvqyHhAGappOvN9wkP0RWe5BiI-sn-LlFChruI"
+    />
+    <meta charset="UTF-8" />
+    <meta name="description" content="The Meme Way: Learn using Memes" />
+    <meta
+      name="keywords"
+      content="the meme Way, meme Way, physics memes, learn physics"
+    />
+    <meta name="author" content="Rahul Tandon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="imgs/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "Nunito", sans-serif;
-        text-align: center;
-        margin-top: 20px;
-        /*  #e73ba5 */
-        background: linear-gradient(-45deg, #ededed, #3ccf61);
-        background-size: 400% 400%;
-        animation: gradient 15s ease infinite;
-      }
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      header {
-        color: #fff;
-      }
-      header h1 {
-        font-size: 3em;
-      }
-      header h3 {
-        font-size: 1.5em;
-      }
-      hr {
-        border-color: #fff;
-        border-style: solid;
-        margin-bottom: 2px;
-      }
-      #container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: baseline;
-        align-content: space-around;
-        padding-left: 5%;
-        padding-right: 5%;
-        margin-bottom: 100px;
-      }
-      .meme-container {
-        margin-top: 5%;
-        /* margin-bottom: 5%;
-        margin-left: 5%; */
-        border-radius: 5px;
-        border-style: solid;
-        border-color: #fff;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        max-height: 500px;
-        max-width: 350px;
-        padding: 10px 10px 10px 10px;
-        background-color: transparent;
-      }
-      .meme-container img {
-        max-width: 200px;
-      }
-      .meme-container .meme-explanation {
-        max-width: 200px;
-        display: none;
-        overflow-y: scroll;
-        max-height: 150px;
-      }
-      footer {
-        text-align: center;
-        padding-top: 5px;
-        padding-bottom: 10px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <header>
@@ -214,44 +148,6 @@
       </div>
     </section>
     <footer>Made with love by Rahul</footer>
-    <script>
-      var containers = document.getElementsByClassName("meme-container");
-      var explanations = document.getElementsByClassName("meme-explanation");
-      var len = containers.length;
-      const explanationIndex = 3;
-      for (var index = 0; index < len; index++) {
-        console.log("for iter");
-        containers[index].addEventListener("click", (event) => {
-          let explanation = event.currentTarget.childNodes[explanationIndex];
-          if (explanation.style.display === "none") {
-            event.currentTarget.childNodes[explanationIndex].style.display =
-              "block";
-          } else {
-            event.currentTarget.childNodes[explanationIndex].style.display =
-              "none";
-          }
-          console.log(event.currentTarget.childNodes[3]);
-        });
-      }
-
-      //   let images = document.getElementsByClassName("meme-image");
-      //   for (index in containers) {
-      //     console.log(index);
-      //     containers[index].addEventListener("click", () => {
-      //       console.log("click!");
-      //     });
-      //   }
-      //     container = containers[index];
-      //     image = images[index];
-
-      //     container.addEventListener("click", () => {
-      //       if (image.dataset.flipped == "false") {
-      //         image.style.transform = "rotateY(180deg)";
-      //       } else {
-      //         image.style.transform = "rotateY(-180deg)";
-      //       }
-      //     });
-      //   }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
